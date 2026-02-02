@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/thankyou.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="thank-you-message">
+            Your Order Successfully Placed...
+        </div>
+        <div class="checkmark animate" id="checkmark">
+            <span>&#10003;</span>
+        </div>
+        <a href="RegisterForm.html" class="redirect-button">Go Back</a>
+    </section>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('checkmark').classList.add('animate');
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TechBazzar | offers the latest in electronics, gadgets, and accessories. Explore our wide range of products and enjoy unbeatable discounts and deals!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/icons" href="images/favicon.PNG">
+
+    <!-- Code For Font Awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha51
+        2-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Code For Font Awesome cdn -->
+
+    <!-- Code For Google Font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <!-- Code For Google Font cdn -->
+
+    <!-- Code For Linking Css File -->
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <!-- Code For Linking Css File -->
+</head>
+
+<body>
+    <!-- Code For Header Section -->
+    <header class="header">
+        <a href="#" class="logo"><img src="images/favicon.PNG" alt=""> TechBazzar</a>
+        <h1 id="welcome-msg" style="display: none;">Welcome!</h1>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="Products.html" id="products-link">products</a>
+            <a href="#categories">categories</a>
+            <a href="AboutUs.html">about us</a>
+            <a href="#contact">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <a href="Products.html#shopping-cart">
+                <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            </a>
+            <div class="fa fa-user" id="login-btn"></div>
+            <span id="user-initial" class="user-initial" style="display: none;"></span>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="Search Here....">
+            <label for="search-box" class="fa fa-search search-Icon"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fa-solid fa-trash-can"></i>
+                <img src="images/ps5.png" alt="">
+                <div class="content">
+                    <h3>Play Station</h3>
+                    <span class="price">Rs 40000/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-trash-can"></i>
+                <img src="images/motorola.webp" alt="">
+                <div class="content">
+                    <h3>Motorola g05</h3>
+                    <span class="price">Rs 6,999/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-trash-can"></i>
+                <img src="images/boat_lunar_vista_smartwatch.webp" alt>
+                <div class="content">
+                    <h3>boat lunar vista</h3>
+                    <span class="price">Rs 1,599/-</span>
+                    <span class="quantity">Qty : 1</span>
+                </div>
+            </div>
+
+            <div class="total"> total : Rs 1800/-</div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+
+        <form action="#" class="login-form" id="login-form">
+            <h3>login now</h3>
+            <input type="email" name="" class="box" id="email" placeholder="your email...." pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" style="text-transform: lowercase;">
+            <input type="password" name="" class="box" id="password" placeholder="your password....">
+
+            <p>forget your password <a href="#">click here</a></p>
+
+            <p>don't have an account <a href="RegisterForm.html">create now</a></p>
+            <input type="submit" value="Login Now" class="btn loginBtn" id="login-now">
+            <input type="submit" value="Log Out" class="btn logoutBtn" id="logout-btn">
+        </form>
+    </header>
+
+    <main class="home1" id="home1">
+        <img src="images/bg.jpg" alt="">
+    </main>
+    <div class="heading">
+        <h1>welcome to <span class="heading-span">TechBazzar</span> website...</h1>
+    </div>
+    <div class="sub-heading">
+        <h3>Find Your Perfect Match in Tech Accessories <span> | </span> Enhance Your Tech, Enhance Your World</h3>
+    </div>
+
+    <section class="home" id="home">
+        <img src="images/discount.png" alt="">
+        <div class="caption">
+            <h1>electronic products up to <span> 50% </span> off</h1>
+            <p>At TechBazzar, we bring the latest in electronics right to your doorstep, offering unbeatable prices and cutting-edge technology to help you stay ahead of the curve.</p>
+            <a href="Products.html"><button class="btn">Shop Now</button></a>
+        </div>
+    </section>
+
+    <!-- Code For Categories Section -->
+    <section class="categories" id="categories">
+        <h1 class="content-heading"> our <span>categories</span></h1>
+        <a href="Products.html">
+            <section class="card-container">
+                <article class="card">
+                    <img src="images/product-1.png" alt="">
+                    <p>Headphones</p>
+                </article>
+                <article class="card">
+                    <img src="images/Laptop.png" alt="">
+                    <p>Laptops</p>
+                </article>
+                <article class="card">
+                    <img src="images/wired earphone.png" alt="">
+                    <p>Earphones</p>
+                </article>
+                <article class="card">
+                    <img src="images/virtual glasses.png" alt="">
+                    <p>VR Glasses</p>
+                </article>
+                <article class="card">
+                    <img src="images/speaker.png" alt="">
+                    <p>Speakers</p>
+                </article>
+                <article class="card">
+                    <img src="images/category6.webp" alt="">
+                    <p>Mobile Phones</p>
+                </article>
+                <article class="card">
+                    <img src="images/category7.webp" alt="">
+                    <p>Camera</p>
+                </article>
+                <article class="card">
+                    <img src="images/category8.webp" alt="">
+                    <p>Televisions</p>
+                </article>
+                <article class="card">
+                    <img src="images/category9.webp" alt="" style="height: 100px; margin-bottom: 100px; margin-top: 50px;">
+                    <p>Air Conditioner</p>
+                </article>
+            </section>
+        </a>
+    </section>
+    <!-- Code For Categories Section -->
+
+    <!-- Code For Features Section -->
+    <section class="features" id="features">
+        <h1 class="content-heading"> our <span>features</span> </h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="images/feature-img-1.webp" alt="" style="width: 100%;  margin-bottom: 38px;">
+                <h3>Reviews & Ratings</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+                <a href="Products.html#reviews" class="btn box-btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="images/feature-img-2.png" alt="" style=" width: 100%;  margin-bottom: 38px;">
+                <h3>free delivery</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+                <a href="AboutUs.html" class="btn box-btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="images/feature-img-3.png" alt="" style=" width: 100%;">
+                <h3>easy payments</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+                <a href="AboutUs.html" class="btn box-btn">read more</a>
+            </div>
+        </div>
+    </section>
+    <!-- Code For Features Section -->
+
+    <!-- Code For Branding Section -->
+    <section class="branding">
+        <article class="brand-card">
+            <img src="images/c3.png" alt="">
+            <div class="brand-caption">
+                <h2>home gadget</h2>
+                <p>latest collection up to 50% off</p>
+            </div>
+        </article>
+        <article class="brand-card">
+            <img src="images/c4.png" alt="">
+            <div class="brand-caption">
+                <h2>gaming gadget</h2>
+                <p>latest collection up to 50% off</p>
+            </div>
+        </article>
+        <article class="brand-card">
+            <img src="images/c5.png" alt="">
+            <div class="brand-caption">
+                <h2>electronic gadget</h2>
+                <p>latest collection up to 50% off</p>
+            </div>
+        </article>
+    </section>
+    <!-- Code For Branding Section -->
+
+    <!-- Code For Footer Section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3><img src="images/favicon.PNG" alt="">T-Bazz </i>
+                </h3>
+                <p>Have Questions or Need Assistance? Get in Touch with Us Today! At TechBazzar, we’re always here to help you with any inquiries, product details, or support you need. Your satisfaction is our top priority!
+                </p>
+
+                <div class="share">
+                    <a href="#" class="fa-brands fa-facebook"></a>
+                    <a href="#" class="fa-brands fa-instagram"></a>
+                    <a href="#" class="fa-brands fa-twitter"></a>
+                    <a href="#" class="fa-brands fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box" id="contact">
+                <h3> Contact Info </h3>
+                <a href="#" class="links"><i class="fa fa-phone"></i> +91 9867453423</a>
+                <a href="#" class="links"><i class="fa fa-phone"></i> +91 4567348697</a>
+                <a href="#" class="links"><i class="fa fa-envelope"></i> info@emaple.com</a>
+                <a href="#" class="links"><i class="fa-solid fa-location-dot"></i> pune, maharashtra, india </a>
+
+            </div>
+
+            <div class="box">
+                <h3> Quick Links </h3>
+                <a href="#home" class="links"><i class="fa fa-arrow-right"></i> Home</a>
+                <a href="#categories" class="links"><i class="fa fa-arrow-right"></i> Categories</a>
+                <a href="#features" class="links"><i class="fa fa-arrow-right"></i> Features</a>
+                <a href="Products.html" class="links"><i class="fa fa-arrow-right"></i> Products</a>
+                <a href="Products.html" class="links"><i class="fa fa-arrow-right"></i> New Arrivals</a>
+            </div>
+
+            <div class="box">
+                <h3> Newsletter </h3>
+                <p>Subscribe For Latest Updates</p>
+
+                <input type="email" name="" class="email" placeholder="your email....">
+                <input type="submit" value="Subscribe" class="btns">
+
+                <img src="images/payment.png" class="payment-img" alt="">
+            </div>
+        </div>
+
+        <a href="#home1" class="circle-chevron-up"><i class="fa fa-circle-chevron-up"></i></a>
+
+        <div class="credit"> created by <span>Ankush Badgujar </span> | all rights reserved</div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
