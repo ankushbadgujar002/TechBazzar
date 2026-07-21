@@ -146,7 +146,7 @@ SPA redirects are configured in `public/_redirects` and `netlify.toml` so page r
 
 - 🌐 Live Site: [techbazzar-ankush.netlify.app](https://techbazzar-ankush.netlify.app)
 - 💼 GitHub: [@ankushbadgujar002](https://github.com/ankushbadgujar002)
-- 📧 Email: info@example.com
+- 📧 Email: ankushbadgujar1122002@gmail.com
 
 ---
 
