@@ -1,0 +1,167 @@
+/* ============================================================
+   REGISTER FORM PAGE - Page-specific styles only
+   Global styles come from indexStyle.css
+   ============================================================ */
+
+/* ---- Register Layout ---- */
+.main-container {
+    height: 86vh;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ---- Register Heading Panel ---- */
+.main-container .register-heading {
+    background: #130f40;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-container .register-heading h1 {
+    color: white;
+    font-size: 50px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.main-container .register-heading,
+.main-container form {
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ---- Register Form Panel ---- */
+.main-container form {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 500px;
+    background-color: white;
+}
+
+.main-container form .heading {
+    font-size: 30px;
+    color: green;
+}
+
+.main-container form .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 60%;
+}
+
+.main-container form .info input {
+    background: none;
+    text-transform: none;
+    font-size: 18px;
+    color: #130f40;
+    border-bottom: 2px solid green;
+    height: 40px;
+    width: 130%;
+    display: flex;
+}
+
+.main-container form .info input:invalid {
+    color: red;
+    border-bottom: 2px solid red;
+    animation: registerMove .2s linear;
+    animation-delay: 0.3s;
+}
+
+.main-container form .info input::placeholder {
+    color: #666;
+    text-transform: capitalize;
+}
+
+/* Dark mode */
+body.dark-mode .main-container .register-heading {
+    background: #0d0d2e;
+}
+
+body.dark-mode .main-container form {
+    background: var(--surface, #1a1a2e);
+}
+
+body.dark-mode .main-container form .heading {
+    color: var(--accent, #00cc66);
+}
+
+body.dark-mode .main-container form .info input {
+    color: var(--text, #e0e0f0);
+    border-bottom-color: var(--accent, #00cc66);
+}
+
+body.dark-mode .main-container form .info input::placeholder {
+    color: var(--text-muted, #a0a0c0);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+    .main-container {
+        margin: 100px 0 100px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container form .heading {
+        font-size: 25px;
+    }
+
+    .main-container form .info input {
+        font-size: 16px;
+        width: auto;
+    }
+
+    .main-container .register-heading h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .main-container .register-heading,
+    .main-container form {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 0;
+    }
+
+    .main-container .register-heading {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        height: auto;
+        padding: 20px;
+    }
+
+    .main-container form {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@keyframes registerMove {
+    25%  { transform: translateX(-10px); }
+    50%  { transform: translateX(10px);  }
+    100% { transform: translateX(-10px); }
+}

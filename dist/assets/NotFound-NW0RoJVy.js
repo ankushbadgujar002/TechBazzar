@@ -1,0 +1,6 @@
+import{j as e,L as n}from"./index-BfFIIgYi.js";function o(){return e.jsxs("div",{style:{minHeight:"80vh",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",padding:"40px 20px",marginTop:"90px"},children:[e.jsx("div",{style:{fontSize:"100px",marginBottom:"10px",animation:"bounce 1s infinite alternate"},children:"🛸"}),e.jsx("h1",{style:{fontSize:"80px",color:"#130f40",fontWeight:"900",margin:"0"},children:"404"}),e.jsx("h2",{style:{fontSize:"28px",color:"#666",marginBottom:"15px",marginTop:"10px"},children:"Page Not Found"}),e.jsx("p",{style:{fontSize:"16px",color:"#888",maxWidth:"450px",lineHeight:"1.6",marginBottom:"35px",textTransform:"none"},children:"Oops! The page you're looking for seems to have gone on a tech adventure and can't be found."}),e.jsxs("div",{style:{display:"flex",gap:"15px",flexWrap:"wrap",justifyContent:"center"},children:[e.jsx(n,{to:"/",className:"btn",style:{display:"inline-block"},children:"🏠 Go Home"}),e.jsx(n,{to:"/products",className:"btn",style:{display:"inline-block",background:"#130f40"},children:"🛒 Browse Products"})]}),e.jsx("style",{children:`
+        @keyframes bounce {
+          from { transform: translateY(0px); }
+          to { transform: translateY(-20px); }
+        }
+      `})]})}export{o as default};

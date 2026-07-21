@@ -1,0 +1,238 @@
+/* ============================================================
+   ABOUT US PAGE - Page-specific styles only
+   Global styles come from indexStyle.css via Home.jsx
+   ============================================================ */
+
+/* ---- About Intro Section ---- */
+.main-container .about {
+    border-top: 2px solid rgba(128, 128, 128, 0.35);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.35);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.main-container .about p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: justify;
+    color: #666;
+}
+
+.main-container .about p::first-letter {
+    color: green;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.brand-name {
+    color: green;
+    font-size: inherit;
+    font-weight: 600;
+}
+
+/* ---- About Image Sections ---- */
+.about-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.35);
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    animation: aboutMoveLeft 1.2s ease-out both;
+}
+
+.about-img img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.about-img .about-img-content {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.about-img2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 30px;
+    padding-top: 40px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.35);
+    padding-bottom: 40px;
+    animation: aboutMoveRight 1.2s ease-out both;
+}
+
+.about-img2 img {
+    height: 360px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.about-img2 .about-img-content {
+    flex: 1;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+/* Shared content style for both about-img sections */
+.about-img-content h4 {
+    position: relative;
+    margin-bottom: 14px;
+    width: fit-content;
+    color: #130f40;
+    font-size: 22px;
+}
+
+.about-img-content h4::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: green;
+    transition: width 0.4s linear;
+}
+
+.about-img-content h4:hover::before {
+    width: 100%;
+}
+
+.about-img-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #666;
+}
+
+/* ---- Guarantee Section ---- */
+.guarentee {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.guarentee-card {
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.guarentee-card:first-of-type  { animation: aboutMoveOne  0.8s ease-out 0.1s both; }
+.guarentee-card:nth-of-type(2) { animation: aboutMoveOne  0.8s ease-out 0.2s both; }
+.guarentee-card:nth-of-type(3) { animation: aboutMoveOne  0.8s ease-out 0.3s both; }
+.guarentee-card:last-of-type   { animation: aboutMoveOne  0.8s ease-out 0.4s both; }
+
+.guarentee i {
+    font-size: 36px;
+    color: green;
+}
+
+.guarentee h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #130f40;
+}
+
+.guarentee h5 {
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* ---- Keyframes ---- */
+@keyframes aboutMoveLeft {
+    from { transform: translateX(80px); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes aboutMoveRight {
+    from { transform: translateX(-80px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes aboutMoveOne {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ---- Dark mode support ---- */
+body.dark-mode .main-container .about {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .about-img-content h4 {
+    color: var(--text, #e0e0f0);
+}
+
+body.dark-mode .about-img-content p,
+body.dark-mode .main-container .about p {
+    color: var(--text-muted, #a0a0c0);
+}
+
+body.dark-mode .guarentee h3 {
+    color: var(--text, #e0e0f0);
+}
+
+body.dark-mode .guarentee h5 {
+    color: var(--text-muted, #a0a0c0);
+}
+
+body.dark-mode .about-img,
+body.dark-mode .about-img2 {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .about-img,
+    .about-img2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img img,
+    .about-img2 img {
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+    }
+
+    .about-img-content h4 {
+        font-size: 18px;
+    }
+
+    .about-img-content p {
+        font-size: 14px;
+    }
+
+    .guarentee {
+        gap: 16px;
+    }
+
+    .guarentee i {
+        font-size: 28px;
+    }
+
+    .guarentee h3 {
+        font-size: 16px;
+    }
+}

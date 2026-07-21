@@ -1,0 +1,769 @@
+/* ============================================================
+   GLOBAL RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee;
+}
+
+section {
+    padding: 2rem 5%;
+}
+
+/* ============================================================
+   CONTENT HEADING
+   ============================================================ */
+.content-heading {
+    text-align: center;
+    padding: 24px 0 36px;
+    font-size: 42px;
+    color: #130f40;
+    margin-top: 30px;
+}
+
+.content-heading span {
+    background: green;
+    color: #fff;
+    display: inline-block;
+    padding: .4rem 2.5rem;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* ============================================================
+   HEADER — Fixed, full-width, clean layout
+   ============================================================ */
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    gap: 8px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #130f40;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.header .logo img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+/* Navigation — horizontally scrollable on overflow, centered vertically */
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.header .navbar a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #130f40;
+    padding: 6px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.header .navbar a:hover {
+    color: green;
+    background: rgba(0, 128, 0, 0.07);
+}
+
+/* Icons row — always right-aligned, never wrap */
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.header .icons div {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    background: #f2f2f2;
+    color: #130f40;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header .icons div:hover {
+    background: green;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Menu btn hidden on desktop */
+#menu-btn {
+    display: none;
+}
+
+/* ============================================================
+   SEARCH FORM (dropdown panel)
+   ============================================================ */
+.header .search-form {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -110%;
+    width: min(500px, 90vw);
+    height: 52px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 0 16px;
+    border: 2px solid #eee;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 16px;
+    color: #130f40;
+}
+
+.header .search-form input::placeholder {
+    color: #aaa;
+}
+
+.header .search-form label {
+    font-size: 18px;
+    color: #130f40;
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: green;
+}
+
+/* ============================================================
+   SHOPPING CART (dropdown panel)
+   ============================================================ */
+.header .shopping-cart {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -110%;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    width: min(380px, 92vw);
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.header .shopping-cart .box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    margin: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;
+}
+
+.header .shopping-cart .box img {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8f8f8;
+    flex-shrink: 0;
+}
+
+.header .shopping-cart .box .fa-trash-can {
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.header .shopping-cart .box .fa-trash-can:hover {
+    color: darkred;
+}
+
+.header .shopping-cart .box .content h3 {
+    color: #130f40;
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: none;
+    padding-right: 24px;
+}
+
+.header .shopping-cart .box .content span {
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.header .shopping-cart .total {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 0 6px;
+    text-align: right;
+    color: #130f40;
+    border-top: 2px solid #f0f0f0;
+    margin-top: 6px;
+}
+
+.header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+    margin: 10px auto 0;
+    width: 100%;
+}
+
+/* ============================================================
+   LOGIN FORM (dropdown panel)
+   ============================================================ */
+.header .login-form {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -110%;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    width: min(360px, 92vw);
+    background: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.header .login-form h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #130f40;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+    text-align: center;
+}
+
+.header .login-form .box {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #130f40;
+    text-transform: none;
+    transition: border-color 0.2s;
+}
+
+.header .login-form .box:focus {
+    border-color: green;
+}
+
+.header .login-form p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+    text-transform: none;
+}
+
+.header .login-form p a {
+    color: green;
+    font-weight: 600;
+}
+
+.header .login-form .loginBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+/* ============================================================
+   GLOBAL BUTTON
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+    background-color: darkgreen;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* ============================================================
+   PRODUCTS PAGE — CARD GRID
+   ============================================================ */
+.products {
+    color: #130f40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5%;
+}
+
+/* CSS Grid — equal column widths, uniform row heights */
+.products .card-container,
+article.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1140px;
+    align-items: start;
+}
+
+/* Each card uses flex to push cart-row to the bottom */
+.products .card-container .card,
+article.card-container article.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 16px 16px 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+    /* No fixed height — let content breathe */
+}
+
+.products .card-container .card:hover,
+article.card-container article.card:hover {
+    box-shadow: 0 8px 28px rgba(0, 128, 0, 0.18);
+    transform: translateY(-4px);
+}
+
+/* Product image — fixed container height so all cards align */
+.products .card-container img,
+article.card-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8f8f8;
+    margin-bottom: 12px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Title — fixed height, 2 line clamp */
+.products .card-container .card h3,
+article.card-container article.card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #130f40;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    /* Clamp to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 40px;
+    flex-shrink: 0;
+}
+
+/* Price + Add-to-cart row — always at the bottom */
+.products .card-container .card .cart,
+article.card-container article.card .cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0 2px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #130f40;
+    margin-top: auto;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Add-to-cart icon button */
+.products .card-container .card .cart .fa-cart-plus,
+article.card-container article.card .cart .fa-cart-plus {
+    color: white;
+    cursor: pointer;
+    background: #130f40;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.2s, transform 0.15s;
+    position: static; /* override old absolute positioning */
+}
+
+.products .card-container .card .cart .fa-cart-plus:hover,
+article.card-container article.card .cart .fa-cart-plus:hover {
+    background: green;
+    transform: scale(1.1);
+}
+
+.products .card-container .card .cart .fa-cart-plus:active {
+    transform: scale(0.9);
+}
+
+/* Remove the old ::after pseudo-element dark corner — replaced by icon button */
+.products .card-container .card::after,
+article.card-container article.card::after {
+    display: none;
+}
+
+/* ============================================================
+   REVIEW SECTION
+   ============================================================ */
+.reviews {
+    text-align: center;
+    padding: 40px 5%;
+    margin-top: 0;
+}
+
+.review-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid green;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.review-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #130f40;
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    text-transform: none;
+    font-style: italic;
+}
+
+.stars {
+    font-size: 18px;
+    color: gold;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    background: #fff;
+    position: relative;
+    padding: 3rem 5% 1.5rem;
+}
+
+.footer .box-container {
+    border: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #130f40;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.footer .box-container .box h3 i {
+    color: green;
+}
+
+.footer .box-container .box .links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #666;
+    padding: .5rem 0;
+    text-transform: none;
+}
+
+.footer .box-container .box .links i {
+    color: green;
+    width: 16px;
+}
+
+.footer .box-container .box .links:hover {
+    color: green;
+    padding-left: 6px;
+}
+
+.footer .box-container .box p {
+    line-height: 1.8;
+    font-size: 14px;
+    color: #666;
+    padding: 8px 0;
+    text-transform: none;
+}
+
+.footer .box-container .box .share {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.footer .box-container .box .share a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #130f40;
+    transition: all .2s linear;
+    text-align: center;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .box-container .box .share a:hover {
+    transform: translateY(-4px);
+    background: green;
+    color: #fff;
+}
+
+.footer .box-container .box .email {
+    width: 100%;
+    margin: .5rem 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    font-size: 14px;
+    color: #130f40;
+    text-transform: none;
+    border: 2px solid #eee;
+}
+
+.footer .box-container .box .email:focus {
+    border-color: green;
+    background: #fff;
+}
+
+.footer .box-container .box .btns {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid green;
+    font-size: 15px;
+    font-weight: 600;
+    color: green;
+    margin-top: 8px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.footer .box-container .box .btns:hover {
+    background-color: green;
+    color: white;
+}
+
+.footer .box-container .box .payment-img {
+    margin-top: 24px;
+    height: 40px;
+}
+
+.footer .credit {
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 28px;
+    padding-top: 16px;
+    color: #130f40;
+    font-size: 16px;
+}
+
+.footer .credit span {
+    color: green;
+    font-weight: 700;
+}
+
+/* ============================================================
+   SCROLL TO TOP BUTTON
+   ============================================================ */
+.circle-chevron-up {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    color: #fff;
+    background: green;
+    font-size: 18px;
+    z-index: 100;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,128,0,0.3);
+    cursor: pointer;
+}
+
+.circle-chevron-up:hover {
+    background: darkgreen;
+    transform: translateY(-3px);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .header .navbar a {
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+
+    .products .card-container,
+    article.card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: flex;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: calc(100% + 4px);
+        right: -110%;
+        width: 280px;
+        max-width: 90vw;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 0;
+        border: 1px solid #f0f0f0;
+    }
+
+    .header .navbar a {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+
+    .products .card-container,
+    article.card-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .footer .credit {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products .card-container,
+    article.card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+
+    .header .icons div {
+        height: 36px;
+        width: 36px;
+        font-size: 16px;
+    }
+}
