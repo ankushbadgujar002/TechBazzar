@@ -118,7 +118,7 @@ export default function Header() {
     <header className="header">
       {/* Logo */}
       <Link to="/" className="logo" onClick={closeAll}>
-        <img src="images/favicon.PNG" alt="TechBazzar Logo" loading="lazy" />
+        <img src="/images/favicon.png" alt="TechBazzar Logo" loading="lazy" />
         TechBazzar
       </Link>
 
