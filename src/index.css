@@ -167,6 +167,150 @@ body.dark-mode .btn {
   color: #fff;
 }
 
+/* ---- Category Cards ---- */
+body.dark-mode .categories .card-container .card {
+  background-color: var(--surface);
+  box-shadow: 0 4px 10px var(--shadow);
+  outline-color: var(--accent);
+}
+
+body.dark-mode .categories .card-container .card p {
+  color: var(--text);
+}
+
+/* ---- Feature Boxes ---- */
+body.dark-mode .features .box-container .box {
+  background: var(--surface);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+body.dark-mode .features .box-container .box h3 {
+  color: var(--text);
+}
+
+body.dark-mode .features .box-container .box p {
+  color: var(--text-muted);
+}
+
+/* ---- Home / Discount Caption ---- */
+body.dark-mode .home .caption h1 {
+  color: var(--text);
+}
+
+body.dark-mode .home .caption p {
+  color: var(--text-muted);
+}
+
+body.dark-mode .home .caption h1 > span {
+  color: var(--accent);
+}
+
+/* ---- Icon buttons in header (wrapper + inner icons) ---- */
+body.dark-mode .header .icons > i,
+body.dark-mode .header .icons > div {
+  background: #2a2a4a;
+  color: var(--text);
+}
+
+body.dark-mode .header .icons > .icon-btn-wrapper {
+  background: transparent;
+}
+
+body.dark-mode .header .icons > .icon-btn-wrapper > i,
+body.dark-mode .header .icons > .icon-btn-wrapper > a {
+  background: #2a2a4a;
+  color: var(--text);
+}
+
+body.dark-mode .header .icons > .icon-btn-wrapper > i:hover,
+body.dark-mode .header .icons > .icon-btn-wrapper > a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+body.dark-mode .header .icons > i:hover,
+body.dark-mode .header .icons > div:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---- Order History Cards ---- */
+body.dark-mode .order-card,
+body.dark-mode [class*="order"] > div {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* ---- Inline pages using div wrappers (OrderHistory, AddToCard) ---- */
+body.dark-mode div[style*="background: #fff"],
+body.dark-mode div[style*="background:#fff"],
+body.dark-mode div[style*="background: white"] {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+body.dark-mode p[style*="color: #888"],
+body.dark-mode p[style*="color:#888"],
+body.dark-mode p[style*="color: #666"],
+body.dark-mode span[style*="color: #333"],
+body.dark-mode span[style*="color: #aaa"] {
+  color: var(--text-muted) !important;
+}
+
+body.dark-mode h1[style*="color: #130f40"],
+body.dark-mode h2[style*="color: #130f40"],
+body.dark-mode h3[style*="color: #130f40"],
+body.dark-mode h4[style*="color: #130f40"],
+body.dark-mode p[style*="color: #130f40"] {
+  color: var(--text) !important;
+}
+
+/* ---- Delivery details panel in OrderHistory ---- */
+body.dark-mode div[style*="background: #f9f9f9"],
+body.dark-mode div[style*="background: #f8f8f8"],
+body.dark-mode div[style*="background: #f5f5f5"] {
+  background: var(--bg) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ---- Footer credit ---- */
+body.dark-mode .footer .credit {
+  color: var(--text-muted);
+  border-top-color: var(--border);
+}
+
+body.dark-mode .footer .credit span {
+  color: var(--accent);
+}
+
+/* ---- Scroll-to-top button ---- */
+body.dark-mode .circle-chevron-up {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---- Login form paragraph link ---- */
+body.dark-mode .header .login-form p {
+  color: var(--text-muted);
+}
+
+body.dark-mode .header .login-form p a {
+  color: var(--accent);
+}
+
+/* ---- Content heading span ---- */
+body.dark-mode .content-heading span {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---- Branding section ---- */
+body.dark-mode .branding {
+  background-color: var(--bg);
+}
+
+
+
 /* ============================================================
    TOAST NOTIFICATION SYSTEM
    ============================================================ */
