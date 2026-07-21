@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <main className="home1" id="home1">
-        <img src="images/bg.jpg" alt="TechBazzar Background Banner" />
+        <img src="images/hero-banner-1.png" alt="TechBazzar Background Banner" />
       </main>
 
       <div className="heading">
