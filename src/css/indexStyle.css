@@ -48,26 +48,40 @@ section {
 
 .heading {
     position: absolute;
-    color: #eee;
-    top: 160px;
-    left: 0;
-    width: 100%;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
     text-align: center;
     z-index: 2;
-    font-family: "Spicy Rice", serif;
-    font-weight: 900;
-    font-style: normal;
-    display: inline-block;
-    text-shadow: 3px 3px 10px grey;
-    line-height: 100px;
-    animation: moveLeft 2s ease-in-out 1.5s 1;
+    font-family: 'Poppins', sans-serif;
+    animation: moveLeft 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s both;
 }
 
+.heading h1 {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.65), 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.heading h1 span.heading-span,
 .heading span {
-    background: green;
-    color: #fff;
+    background: rgba(0, 128, 0, 0.85);
+    color: #ffffff;
     display: inline-block;
-    padding: 11px 48px;
+    padding: 2px 18px;
+    margin: 0 6px;
+    border-radius: 10px;
+    font-style: normal;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.4);
+    backdrop-filter: blur(4px);
+    vertical-align: middle;
 }
 
 .header {
@@ -397,33 +411,32 @@ section {
     object-fit: cover;
 }
 
-h1 .heading-span {
-    background: transparent;
-    font-style: italic;
-    color: green;
-    margin: 0 -20px 0 -10px;
-}
-
 .sub-heading {
     position: absolute;
-    color: #eee;
-    top: 460px;
-    left: 70px;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
     z-index: 2;
-    font-family: "poppins", serif;
-    font-weight: 900;
-    font-style: normal;
-    display: inline-block;
-    line-height: 60px;
-    font-size: 18px;
-    word-spacing: 4px;
-    text-shadow: 0px 0px 20px white;
-    animation: moveRight 2s ease-in-out 2s 1;
+    font-family: 'Poppins', sans-serif;
+    animation: moveRight 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s both;
+}
+
+.sub-heading h3 {
+    font-size: clamp(0.95rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.5;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+    margin: 0;
 }
 
 .sub-heading span {
-    font-size: 22px;
-    margin: 10px;
+    color: #00e676;
+    font-weight: 700;
+    margin: 0 8px;
 }
 
 
@@ -948,40 +961,52 @@ h1 .heading-span {
 
     .heading {
         top: 100px;
-        font-size: 32px;
-        line-height: 50px;
+        width: 94%;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+        line-height: 1.3;
     }
 
     .sub-heading {
-        top: 260px;
-        left: 20px;
-        right: 20px;
-        font-size: 14px;
-        line-height: 30px;
-        word-spacing: 2px;
+        top: 210px;
+        width: 94%;
+    }
+
+    .sub-heading h3 {
+        font-size: 13px;
+        line-height: 1.4;
     }
 }
 
 @media (max-width: 480px) {
     .home1 {
-        height: 380px;
+        height: 340px;
     }
     .home1 img {
-        height: 380px;
+        height: 340px;
     }
     .heading {
         top: 80px;
-        font-size: 24px;
-        line-height: 40px;
+        width: 96%;
     }
+    .heading h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    .heading h1 span.heading-span,
     .heading span {
-        padding: 6px 18px;
+        padding: 2px 10px;
+        margin: 0 3px;
+        border-radius: 6px;
     }
     .sub-heading {
-        top: 200px;
-        left: 10px;
-        right: 10px;
-        font-size: 12px;
-        line-height: 20px;
+        top: 175px;
+        width: 96%;
+    }
+    .sub-heading h3 {
+        font-size: 11px;
+        line-height: 1.4;
     }
 }
