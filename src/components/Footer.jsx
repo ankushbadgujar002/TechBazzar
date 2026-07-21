@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="box-container">
         <div className="box">
           <h3>
-            <img src="/images/favicon.png" alt="TechBazzar Logo" style={{ width: '30px', height: '30px', objectFit: 'contain', marginRight: '5px', verticalAlign: 'middle' }} />
+            <img src="/images/favicon.ico" alt="TechBazzar Logo" style={{ width: '30px', height: '30px', objectFit: 'contain', marginRight: '5px', verticalAlign: 'middle' }} />
             T-Bazz
           </h3>
           <p>
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="box" id="contact">
-          <h3> Contact Info </h3>
+          <h3 className='dark:text-white dark:border-blue-400/30'> Contact Info </h3>
           <a href="tel:+919867453423" className="links"><i className="fa fa-phone"></i> +91 9867453423</a>
           <a href="tel:+914567348697" className="links"><i className="fa fa-phone"></i> +91 4567348697</a>
           <a href="mailto:info@example.com" className="links"><i className="fa fa-envelope"></i> info@example.com</a>

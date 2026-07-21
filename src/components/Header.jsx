@@ -118,7 +118,7 @@ export default function Header() {
     <header className="header">
       {/* Logo */}
       <Link to="/" className="logo" onClick={closeAll}>
-        <img src="/images/favicon.png" alt="TechBazzar Logo" style={{ height: '32px', width: '32px', objectFit: 'contain' }} loading="lazy" />
+        <img src="/images/favicon.ico" alt="TechBazzar Logo" style={{ height: '32px', width: '32px', objectFit: 'contain' }} loading="lazy" />
         TechBazzar
       </Link>
 
