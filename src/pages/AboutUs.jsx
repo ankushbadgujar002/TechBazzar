@@ -1,10 +1,21 @@
 import React from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import '../css/AboutUs.css';
 
 export default function AboutUs() {
+  const [aboutRef, aboutRevealed] = useScrollReveal();
+  const [missionRef, missionRevealed] = useScrollReveal();
+  const [whyChooseRef, whyChooseRevealed] = useScrollReveal();
+  const [guaranteeRef, guaranteeRevealed] = useScrollReveal();
+
   return (
     <>
-      <section className="main-container" id="about" style={{ marginTop: '80px' }}>
+      <section
+        ref={aboutRef}
+        className={`main-container sr-fade-up ${aboutRevealed ? 'sr-revealed' : ''}`}
+        id="about"
+        style={{ marginTop: '80px' }}
+      >
         <h1 className="content-heading" style={{ marginTop: '0' }}>About <span>Us</span></h1>
         <article className="about" id="about">
           <p>
@@ -17,19 +28,27 @@ export default function AboutUs() {
         </article>
       </section>
 
-      <section className="about-img" id="our-mission">
+      <section
+        ref={missionRef}
+        className={`about-img ${missionRevealed ? 'sr-revealed' : ''}`}
+        id="our-mission"
+      >
         <img src="images/about-us.png" alt="Our Mission Banner" />
         <div className="about-img-content">
           <h4>Our Mission</h4>
           <p>
             Our mission is simple – to deliver cutting-edge technology to your doorstep at the best possible prices. 
-            We are committed to offering a seamless shopping experience with excellent customer service, quick delivery, and hassle-free returns. 
+            We are committed to offering a shopping experience with excellent customer service, quick delivery, and hassle-free returns. 
             We aim to empower our customers by providing them with the tools they need to stay ahead in this fast-paced tech world.
           </p>
         </div>
       </section>
 
-      <section className="about-img2" id="why-choose-us">
+      <section
+        ref={whyChooseRef}
+        className={`about-img2 ${whyChooseRevealed ? 'sr-revealed' : ''}`}
+        id="why-choose-us"
+      >
         <img src="images/why-choose-us.jpg" alt="Why Choose Us Banner" />
         <div className="about-img-content">
           <h4>Why Choose Us?</h4>
@@ -42,7 +61,10 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="guarentee">
+      <section
+        ref={guaranteeRef}
+        className={`guarentee ${guaranteeRevealed ? 'sr-revealed' : ''}`}
+      >
         <article className="guarentee-card">
           <i className="fa-solid fa-cart-shopping"></i>
           <h3>Free Shipping</h3>

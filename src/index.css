@@ -333,3 +333,49 @@ button:hover { transform: translateY(-1px); }
   .toast-container { bottom: 10px; right: 10px; left: 10px; max-width: none; }
   .toast { min-width: unset; }
 }
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER UTILITIES)
+   ============================================================ */
+.sr-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform;
+}
+
+.sr-pop-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  will-change: opacity, transform;
+}
+
+.sr-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform;
+}
+
+.sr-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform;
+}
+
+/* Reveal Trigger State */
+.sr-revealed {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+/* Stagger delays (applied to direct children or items) */
+.delay-100 { transition-delay: 100ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+.delay-600 { transition-delay: 600ms !important; }
+

@@ -40,6 +40,10 @@
     border-bottom: 2px solid rgba(128, 128, 128, 0.35);
     padding-bottom: 40px;
     margin-bottom: 0;
+    opacity: 0;
+}
+
+.about-img.sr-revealed {
     animation: aboutMoveLeft 1.2s ease-out both;
 }
 
@@ -66,6 +70,10 @@
     padding-top: 40px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.35);
     padding-bottom: 40px;
+    opacity: 0;
+}
+
+.about-img2.sr-revealed {
     animation: aboutMoveRight 1.2s ease-out both;
 }
 
@@ -134,12 +142,13 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    opacity: 0;
 }
 
-.guarentee-card:first-of-type  { animation: aboutMoveOne  0.8s ease-out 0.1s both; }
-.guarentee-card:nth-of-type(2) { animation: aboutMoveOne  0.8s ease-out 0.2s both; }
-.guarentee-card:nth-of-type(3) { animation: aboutMoveOne  0.8s ease-out 0.3s both; }
-.guarentee-card:last-of-type   { animation: aboutMoveOne  0.8s ease-out 0.4s both; }
+.sr-revealed .guarentee-card:first-of-type  { animation: aboutMoveOne  0.8s ease-out 0.1s both; }
+.sr-revealed .guarentee-card:nth-of-type(2) { animation: aboutMoveOne  0.8s ease-out 0.2s both; }
+.sr-revealed .guarentee-card:nth-of-type(3) { animation: aboutMoveOne  0.8s ease-out 0.3s both; }
+.sr-revealed .guarentee-card:last-of-type   { animation: aboutMoveOne  0.8s ease-out 0.4s both; }
 
 .guarentee i {
     font-size: 36px;

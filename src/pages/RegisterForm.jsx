@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
@@ -17,6 +17,11 @@ export default function RegisterForm() {
   // Inline field errors
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,11 +75,16 @@ export default function RegisterForm() {
 
   return (
     <section className="main-container" id="home" style={{ marginTop: '80px', paddingBottom: '60px' }}>
-      <article className="register-heading">
+      <article className={`register-heading sr-slide-left ${isMounted ? 'sr-revealed' : ''}`}>
         <h1>Register</h1>
       </article>
 
-      <form onSubmit={handleSubmit} id="form" noValidate>
+      <form
+        onSubmit={handleSubmit}
+        id="form"
+        className={`sr-slide-right ${isMounted ? 'sr-revealed' : ''}`}
+        noValidate
+      >
         <h1 className="heading" style={{
           position: 'relative', top: '0', left: '0', animation: 'none',
           textShadow: 'none', color: '#130f40', fontSize: '28px',
