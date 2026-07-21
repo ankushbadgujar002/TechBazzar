@@ -114,7 +114,9 @@ section {
     flex-shrink: 0;
 }
 
-.header .icons div {
+.header .icons > div,
+.header .icons > span,
+.header .icons > a {
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -130,7 +132,9 @@ section {
     flex-shrink: 0;
 }
 
-.header .icons div:hover {
+.header .icons > div:hover,
+.header .icons > span:hover,
+.header .icons > a:hover {
     background: green;
     color: #fff;
     transform: translateY(-2px);
