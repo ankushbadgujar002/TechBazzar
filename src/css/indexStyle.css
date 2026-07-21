@@ -47,15 +47,6 @@ section {
 }
 
 .heading {
-    text-align: center;
-    padding: 32px 0;
-    padding-bottom: 48px;
-    font-size: 55px;
-    color: #130f40;
-    width: 100%;
-}
-
-.heading {
     position: absolute;
     color: #eee;
     top: 160px;
@@ -222,7 +213,7 @@ section {
 .header .shopping-cart .box {
     display: flex;
     align-items: center;
-    gap: 15 px;
+    gap: 15px;
     position: relative;
     margin: 16px 0;
 }
@@ -283,7 +274,6 @@ section {
     border-radius: 6px;
     box-shadow: 0 .1rem 1rem rgba(0, 0, 0.1);
     width: 450px;
-    height: 390px;
     background: #fff;
     text-align: center;
 }
@@ -316,7 +306,6 @@ section {
     text-transform: capitalize;
     font-size: 18px;
     padding: 2px 0;
-
 }
 
 .header .login-form p a {
@@ -325,10 +314,8 @@ section {
 }
 
 .loginBtn {
-    position: absolute;
-    right: 34%;
-    top: 80%;
-    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .home1 {
@@ -454,33 +441,12 @@ h1 .heading-span {
     word-spacing: 2px;
 }
 
-.logoutBtn{
-    display: none;
-    position: absolute;
-    right: 37%;
-    top: 80%;
-    background: red;
-}
-
-.logoutBtn:hover{
-    background: darkred;
-}
-
 .user-initial {
     background-color: #007bff !important;
     color: white !important;
     font-weight: bold;
     font-size: 18px;
     border-radius: 50% !important;
-}
-
-#welcome-msg{
-    position: absolute;
-    left: 44%;
-    top: 2%;
-    font-size: 20px;
-    color: green;
-    opacity: .5;
 }
 
 .categories {
@@ -594,8 +560,8 @@ h1 .heading-span {
 }
 
 .features .box-container .box .box-btn {
-    position: relative;
-    left: 180px;
+    display: inline-block;
+    margin: 10px auto 0;
 }
 
 .branding {
@@ -745,11 +711,11 @@ h1 .heading-span {
 
 .footer .credit {
     text-align: center;
-    border-top: .2rem solid rgba(0, 0, 0, 0.363);
-    margin-top: 2rem;
-    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 28px;
+    padding-top: 16px;
     color: #130f40;
-    font-size: 2rem;
+    font-size: 16px;
 }
 
 .footer .credit span {
@@ -913,16 +879,48 @@ h1 .heading-span {
     .branding .brand-card img{
        width: 100%;
        height: auto;
-    }
+     }
 
     .footer {
         text-align: center;
     }
 
+    .heading {
+        top: 100px;
+        font-size: 32px;
+        line-height: 50px;
+    }
+
+    .sub-heading {
+        top: 260px;
+        left: 20px;
+        right: 20px;
+        font-size: 14px;
+        line-height: 30px;
+        word-spacing: 2px;
+    }
 }
 
 @media (max-width: 480px) {
-    .home1{
-        
+    .home1 {
+        height: 380px;
+    }
+    .home1 img {
+        height: 380px;
+    }
+    .heading {
+        top: 80px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .heading span {
+        padding: 6px 18px;
+    }
+    .sub-heading {
+        top: 200px;
+        left: 10px;
+        right: 10px;
+        font-size: 12px;
+        line-height: 20px;
     }
 }

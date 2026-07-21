@@ -5,12 +5,13 @@
 
 /* ---- Register Layout ---- */
 .main-container {
-    height: 86vh;
+    min-height: calc(100vh - 70px);
     margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 40px 20px;
 }
 
 /* ---- Register Heading Panel ---- */
