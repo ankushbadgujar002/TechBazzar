@@ -93,8 +93,10 @@ section {
 }
 
 .header .logo img {
-    position: relative;
-    top: 5px;
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .header .navbar {

@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="box-container">
         <div className="box">
           <h3>
-            <img src="/images/favicon.png" alt="TechBazzar Logo" style={{ width: '30px', height: '30px', marginRight: '5px', verticalAlign: 'middle' }} />
+            <img src="/images/favicon.png" alt="TechBazzar Logo" style={{ width: '30px', height: '30px', objectFit: 'contain', marginRight: '5px', verticalAlign: 'middle' }} />
             T-Bazz
           </h3>
           <p>
