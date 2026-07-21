@@ -135,53 +135,54 @@ export default function Header() {
 
       {/* Icon Buttons */}
       <div className="icons">
-        <div className="fa fa-bars" id="menu-btn" onClick={() => { closeAll(); setMenuOpen(true); }} title="Menu"></div>
-        <div className="fa fa-search" id="search-btn" onClick={() => { closeAll(); setSearchOpen(true); }} title="Search"></div>
+        <i className="fa fa-bars" id="menu-btn" onClick={() => { closeAll(); setMenuOpen(true); }} title="Menu"></i>
+        <i className="fa fa-search" id="search-btn" onClick={() => { closeAll(); setSearchOpen(true); }} title="Search"></i>
 
         {/* Cart Button with badge */}
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          <div
+        <div className="icon-btn-wrapper" style={{ position: 'relative' }}>
+          <i
             className="fa fa-shopping-cart"
             id="cart-btn"
             onClick={() => { closeAll(); setCartOpen((v) => !v); }}
             title="Cart"
-          ></div>
+          ></i>
           {cartItemCount > 0 && (
             <span style={{
-              position: 'absolute', top: '-8px', right: '-8px',
-              background: 'red', color: '#fff', borderRadius: '50%',
-              width: '20px', height: '20px', fontSize: '11px', fontWeight: 'bold',
+              position: 'absolute', top: '-4px', right: '-4px',
+              background: '#cc0000', color: '#fff', borderRadius: '50%',
+              width: '18px', height: '18px', fontSize: '10px', fontWeight: 'bold',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              lineHeight: '1'
+              lineHeight: '1', zIndex: 2, boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
             }}>{cartItemCount}</span>
           )}
         </div>
 
         {/* Wishlist Button with badge */}
         {isLoggedIn && (
-          <div style={{ position: 'relative', display: 'inline-block' }}>
-            <Link to="/products" title="Wishlist" style={{ display: 'flex' }} onClick={closeAll}>
-              <div className="fa fa-heart" style={{ color: wishlist.length > 0 ? 'red' : undefined }}></div>
+          <div className="icon-btn-wrapper" style={{ position: 'relative' }}>
+            <Link to="/products" title="Wishlist" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'inherit' }} onClick={closeAll}>
+              <i className="fa fa-heart" style={{ color: wishlist.length > 0 ? 'red' : undefined }}></i>
             </Link>
             {wishlist.length > 0 && (
               <span style={{
-                position: 'absolute', top: '-8px', right: '-8px',
-                background: 'red', color: '#fff', borderRadius: '50%',
-                width: '20px', height: '20px', fontSize: '11px', fontWeight: 'bold',
-                display: 'flex', alignItems: 'center', justifyContent: 'center'
+                position: 'absolute', top: '-4px', right: '-4px',
+                background: '#cc0000', color: '#fff', borderRadius: '50%',
+                width: '18px', height: '18px', fontSize: '10px', fontWeight: 'bold',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                lineHeight: '1', zIndex: 2, boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
               }}>{wishlist.length}</span>
             )}
           </div>
         )}
 
         {/* Dark Mode Toggle */}
-        <div
+        <i
           className={isDarkMode ? 'fa fa-sun' : 'fa fa-moon'}
           id="theme-btn"
           onClick={toggleTheme}
           title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-          style={{ fontSize: '20px' }}
-        ></div>
+          style={{ fontSize: '18px' }}
+        ></i>
 
         {/* User / Login Button */}
         {isLoggedIn && currentUser ? (
@@ -189,18 +190,18 @@ export default function Header() {
             id="user-initial"
             className="user-initial"
             onClick={() => { closeAll(); setLoginOpen((v) => !v); }}
-            style={{ display: 'flex', cursor: 'pointer' }}
+            style={{ cursor: 'pointer' }}
             title="Account Info"
           >
             {initial}
           </span>
         ) : (
-          <div
+          <i
             className="fa fa-user"
             id="login-btn"
             onClick={() => { closeAll(); setLoginOpen((v) => !v); }}
             title="Account"
-          ></div>
+          ></i>
         )}
       </div>
 

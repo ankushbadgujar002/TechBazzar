@@ -129,7 +129,8 @@ section {
 
 .header .icons > div,
 .header .icons > span,
-.header .icons > a {
+.header .icons > a,
+.header .icons > i {
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -151,10 +152,64 @@ section {
 
 .header .icons > div:hover,
 .header .icons > span:hover,
-.header .icons > a:hover {
+.header .icons > a:hover,
+.header .icons > i:hover {
     background: green;
     color: white;
     cursor: pointer;
+}
+
+/* Wrapper div for icon buttons with badges — suppress button background on wrapper */
+.header .icons > .icon-btn-wrapper {
+    background: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    overflow: visible;
+    border-radius: 0;
+}
+
+.header .icons > .icon-btn-wrapper:hover {
+    background: transparent;
+    transform: none;
+}
+
+.header .icons > .icon-btn-wrapper > i {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    background: #f2f2f2;
+    color: #130f40;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .icons > .icon-btn-wrapper > i:hover {
+    background: green;
+    color: white;
+}
+
+/* Wishlist link fills the whole wrapper button area */
+.header .icons > .icon-btn-wrapper > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f2f2f2;
+    color: #130f40;
+    font-size: 18px;
+}
+
+.header .icons > .icon-btn-wrapper > a:hover {
+    background: green;
+    color: white;
 }
 
 .header .search-form {
