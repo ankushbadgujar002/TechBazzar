@@ -713,9 +713,9 @@ article.card-container article.card::after {
     text-align: center;
     border-top: 1px solid #eee;
     margin-top: 28px;
-    padding-top: 16px;
+    padding-top: 14px;
     color: #130f40;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .footer .credit span {

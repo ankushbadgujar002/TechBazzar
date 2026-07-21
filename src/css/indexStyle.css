@@ -678,9 +678,10 @@ h1 .heading-span {
 }
 
 .footer .box-container .box h3 {
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: 700;
     color: #130f40;
-    padding: 1rem 1px;
+    padding: 0.5rem 1px;
 }
 
 .footer .box-container .box h3 i {
@@ -689,9 +690,9 @@ h1 .heading-span {
 
 .footer .box-container .box .links {
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     color: #666;
-    padding: 1rem 0;
+    padding: 0.4rem 0;
     transition: transform .2s linear;
 }
 
@@ -701,54 +702,57 @@ h1 .heading-span {
 }
 
 .footer .box-container .box .links:hover i {
-    padding-right: 2rem;
+    padding-right: 1.5rem;
 }
 
 .footer .box-container .box p {
-    line-height: 1.8;
-    font-size: 18px;
+    line-height: 1.6;
+    font-size: 14px;
     color: #666;
-    padding: 12px 0px;
+    padding: 8px 0px;
     text-align: left;
 }
 
 .footer .box-container .box .share a {
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
     border-radius: 6px;
-    font-size: 25px;
+    font-size: 16px;
     color: #130f40;
     margin-left: .2rem;
     transition: transform .2s linear;
     text-align: center;
     background: #eee;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer .box-container .box .share a:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     background: green;
     color: #fff;
 }
 
 .footer .box-container .box .email {
     width: 100%;
-    margin: .7rem 0;
-    padding: 16px;
+    margin: .5rem 0;
+    padding: 12px;
     border-radius: 8px;
     background: #eee;
-    font-size: 18px;
+    font-size: 14px;
     color: #130f40;
     text-transform: none;
 }
 
 .footer .box-container .box .btns {
     width: 70%;
-    padding: 10px 16px;
+    padding: 8px 14px;
     border-radius: 8px;
     border: 2px solid #130f40;
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 14px;
+    margin-top: 8px;
 }
 
 .footer .box-container .box .btns:hover {
@@ -757,22 +761,22 @@ h1 .heading-span {
 }
 
 .footer .box-container .box .btns:active {
-    transform: scale(1.05);
+    transform: scale(1.03);
     letter-spacing: 1px;
 }
 
 .footer .box-container .box .payment-img {
-    margin-top: 2rem;
-    height: 3rem;
+    margin-top: 1.5rem;
+    height: 2.5rem;
 }
 
 .footer .credit {
     text-align: center;
     border-top: 1px solid #eee;
-    margin-top: 28px;
-    padding-top: 16px;
+    margin-top: 24px;
+    padding-top: 14px;
     color: #130f40;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .footer .credit span {
